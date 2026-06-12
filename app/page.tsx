@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Facebook, Instagram, Twitter, Youtube, PhoneCall, Mail, Wrench, MapPin, Headphones, ShieldCheck, Thermometer, CheckCircle2 } from "lucide-react";
+import { Facebook, PhoneCall, Mail, Wrench, MapPin, Headphones, ShieldCheck, Thermometer, CheckCircle2 } from "lucide-react";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 30 },
@@ -204,7 +204,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 mb-10">
-              <div className="glow-card flex items-center gap-4 p-5 w-full">
+              <div className="about-card flex items-center gap-4 p-5 w-full">
                 <div className="icon-box-glow w-16 h-16">
                   <svg viewBox="0 0 24 24" className="w-8 h-8 fill-none" stroke="#1a2b49" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="5" width="20" height="14" rx="2"/>
@@ -213,19 +213,19 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-base text-[#2196f3] mb-0.5">Energeticky úsporné technológie</h4>
-                  <p className="text-sm text-gray-500">Efektívne chladenie s nižšími nákladmi na energie.</p>
+                  <h4 className="about-card-title font-bold text-base text-[#2196f3] mb-0.5 transition-colors duration-400">Energeticky úsporné technológie</h4>
+                  <p className="about-card-desc text-sm text-gray-500 transition-colors duration-400">Efektívne chladenie s nižšími nákladmi na energie.</p>
                 </div>
               </div>
-              <div className="glow-card flex items-center gap-4 p-5 w-full">
+              <div className="about-card flex items-center gap-4 p-5 w-full">
                 <div className="icon-box-glow w-16 h-16">
                   <svg viewBox="0 0 24 24" className="w-8 h-8 fill-none" stroke="#1a2b49" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-base text-[#2196f3] mb-0.5">Odborná montáž a servis</h4>
-                  <p className="text-sm text-gray-500">Spoľahlivé HVAC služby pre dlhodobý výkon.</p>
+                  <h4 className="about-card-title font-bold text-base text-[#2196f3] mb-0.5 transition-colors duration-400">Odborná montáž a servis</h4>
+                  <p className="about-card-desc text-sm text-gray-500 transition-colors duration-400">Spoľahlivé HVAC služby pre dlhodobý výkon.</p>
                 </div>
               </div>
             </div>
@@ -326,23 +326,13 @@ export default function Home() {
               <motion.div
                 key={i}
                 {...fadeUp(i * 0.07)}
-                className="bg-white border border-gray-100 rounded-2xl shadow-[0_3px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_5px_30px_rgba(33,150,243,0.15)] transition-all duration-300 hover:-translate-y-1 py-8 px-4 flex items-center justify-center"
+                className="glow-card py-8 px-4 flex items-center justify-center"
               >
                 <span className={brand.style}>{brand.name}</span>
               </motion.div>
             ))}
           </div>
 
-          {/* Technician icon */}
-          <motion.div {...fadeUp(0.1)} className="flex justify-center mt-10">
-            <svg viewBox="0 0 80 80" className="w-20 h-20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="40" cy="18" r="10" stroke="#2196f3" strokeWidth="2.5"/>
-              <path d="M20 70c0-11 9-20 20-20s20 9 20 20" stroke="#2196f3" strokeWidth="2.5" strokeLinecap="round"/>
-              <path d="M50 42l8-8M48 50h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2H48" stroke="#2196f3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M48 38v12" stroke="#2196f3" strokeWidth="2" strokeLinecap="round"/>
-              <circle cx="56" cy="46" r="2" fill="#2196f3"/>
-            </svg>
-          </motion.div>
         </div>
       </section>
 
@@ -397,16 +387,9 @@ export default function Home() {
               <span className="font-bold text-2xl text-[#1a2b49] uppercase tracking-tight">Involtklima</span>
             </div>
             <div className="flex items-center gap-3">
-              {[
-                { Icon: Facebook, label: 'Facebook' },
-                { Icon: Instagram, label: 'Instagram' },
-                { Icon: Twitter, label: 'Twitter' },
-                { Icon: Youtube, label: 'YouTube' },
-              ].map(({ Icon, label }) => (
-                <a key={label} href="#" aria-label={label} className="w-11 h-11 rounded-full border border-[rgba(33,150,243,0.3)] bg-white flex items-center justify-center text-[#1a2b49] hover:border-[#2196f3] hover:text-[#2196f3] transition-colors shadow-[0_3px_12px_rgba(33,150,243,0.08)]">
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
+              <a href="#" aria-label="Facebook" className="w-11 h-11 rounded-full border border-[rgba(33,150,243,0.3)] bg-white flex items-center justify-center text-[#1a2b49] hover:border-[#2196f3] hover:text-[#2196f3] transition-colors shadow-[0_3px_12px_rgba(33,150,243,0.08)]">
+                <Facebook className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
