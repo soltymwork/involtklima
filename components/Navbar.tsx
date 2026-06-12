@@ -31,7 +31,10 @@ const Navbar = () => {
   const activeLinkCls = 'border-b-2 border-[#2196f3]';
 
   return (
-    <nav className={`fixed top-0 w-full z-50 py-3 px-6 md:px-12 ${mounted ? 'transition-[background-color,box-shadow] duration-300' : ''} ${scrolled || isOpen ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 py-3 px-6 md:px-12 transform-gpu ${mounted ? 'transition-[background-color,box-shadow] duration-300' : ''} ${scrolled || isOpen ? 'bg-white shadow-md' : 'bg-transparent'}`}
+      style={{ willChange: 'background-color', backfaceVisibility: 'hidden' }}
+    >
       <div className="max-w-[1400px] mx-auto flex items-center justify-between h-16 md:h-[72px]">
 
         {/* Logo */}
