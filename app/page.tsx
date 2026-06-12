@@ -272,7 +272,7 @@ export default function Home() {
                 btn: 'Ísť eco',
               },
             ].map((s, i) => (
-              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group relative flex flex-col snap-center shrink-0 lg:shrink w-[82%] sm:w-[46%] lg:w-auto">
+              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group relative flex flex-col snap-start shrink-0 lg:shrink w-full lg:w-auto">
                 {/* Image inset */}
                 <div className="m-2 rounded-xl overflow-hidden h-52 relative">
                   <Image src={s.img} fill alt={s.title} className="object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -355,7 +355,7 @@ export default function Home() {
               { title: 'Kedy volať servis?', date: '12. júna 2026', img: '/blog-servis.jpg', desc: 'Včasné rozpoznanie varovných signálov môže predísť nákladným poruchám a predĺžiť životnosť zariadenia.' },
               { title: 'Tipy na leto', date: '12. júna 2026', img: '/blog-leto.jpg', desc: 'Ako efektívne využívať klimatizáciu v lete, aby ste maximalizovali komfort a minimalizovali náklady.' },
             ].map((post, i) => (
-              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group flex flex-col snap-center shrink-0 lg:shrink w-[82%] sm:w-[46%] lg:w-auto">
+              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group flex flex-col snap-start shrink-0 lg:shrink w-full lg:w-auto">
                 <div className="m-2 rounded-xl overflow-hidden h-48 relative">
                   <Image src={post.img} fill alt={post.title} className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
