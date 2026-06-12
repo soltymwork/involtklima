@@ -31,12 +31,12 @@ const Navbar = () => {
   const activeLinkCls = 'border-b-2 border-[#2196f3]';
 
   return (
-    <nav className={`fixed top-0 w-full z-50 ${mounted ? 'transition-all duration-300' : ''} ${scrolled || isOpen ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'} px-6 md:px-12`}>
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between min-h-20">
+    <nav className={`fixed top-0 w-full z-50 py-3 px-6 md:px-12 ${mounted ? 'transition-[background-color,box-shadow] duration-300' : ''} ${scrolled || isOpen ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+      <div className="max-w-[1400px] mx-auto flex items-center justify-between h-16 md:h-[72px]">
 
         {/* Logo */}
         <Link href="/" className="flex items-center relative z-50" onClick={() => setIsOpen(false)}>
-          <Image src="/logo.png" alt="Involtklima" width={300} height={84} className="object-contain h-20 w-auto" priority />
+          <Image src="/logo.png" alt="Involtklima" width={300} height={84} className="object-contain h-14 md:h-16 w-auto" priority />
         </Link>
 
         {/* Desktop Links */}
