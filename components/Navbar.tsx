@@ -6,6 +6,7 @@ import Image from 'next/image';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     let ticking = false;
@@ -21,6 +22,8 @@ const Navbar = () => {
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
+    // prechody zapneme až po prvom paint-e — zamedzí "dobiehaniu" navbaru pri načítaní
+    requestAnimationFrame(() => setMounted(true));
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -28,8 +31,8 @@ const Navbar = () => {
   const activeLinkCls = 'border-b-2 border-[#2196f3]';
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled || isOpen ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'} px-6 md:px-12`}>
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between">
+    <nav className={`fixed top-0 w-full z-50 ${mounted ? 'transition-all duration-300' : ''} ${scrolled || isOpen ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'} px-6 md:px-12`}>
+      <div className="max-w-[1400px] mx-auto flex items-center justify-between min-h-20">
 
         {/* Logo */}
         <Link href="/" className="flex items-center relative z-50" onClick={() => setIsOpen(false)}>
