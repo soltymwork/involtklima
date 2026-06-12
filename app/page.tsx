@@ -35,8 +35,8 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto text-white">
-          <motion.h1 {...fadeUp(0)} className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
-            Pohoda doma aj v práci<br />Úsporné klimatizácie
+          <motion.h1 {...fadeUp(0)} className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-white" style={{ fontFamily: 'var(--font-kodchasan), sans-serif' }}>
+            Zostaňte v chlade – energeticky úsporné chladenie
           </motion.h1>
           <motion.p {...fadeUp(0.1)} className="text-lg md:text-xl font-normal mb-10 text-gray-200">
             Zvýšte svoj komfort s modernou klimatizáciou na mieru.
@@ -244,28 +244,28 @@ export default function Home() {
 
             {[
               {
-                img: 'https://picsum.photos/seed/smartac/500/300',
+                img: '/smart.jpg',
                 icon: <svg className="w-7 h-7 stroke-[#2196f3]" viewBox="0 0 24 24" fill="none" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2H8V6a4 4 0 0 1 4-4z"/><rect x="4" y="8" width="16" height="10" rx="2"/><line x1="8" y1="13" x2="10" y2="13"/><line x1="14" y1="13" x2="16" y2="13"/></svg>,
                 title: 'Inteligentná klimatizácia',
                 desc: 'Automatická regulácia teploty pre maximálny komfort.',
                 btn: 'Zistiť viac',
               },
               {
-                img: 'https://picsum.photos/seed/airq/500/300',
+                img: '/clean.jpg',
                 icon: <svg className="w-7 h-7 stroke-[#2196f3]" viewBox="0 0 24 24" fill="none" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12c1-2 3-3 4-3s3 1 4 3"/><path d="M12 9v3"/></svg>,
                 title: 'Kvalita vzduchu',
                 desc: 'Pokročilá filtrácia pre čistejší a zdravší vzduch.',
                 btn: 'Vylepšiť vzduch',
               },
               {
-                img: 'https://picsum.photos/seed/commerc/500/300',
+                img: '/install.jpg',
                 icon: <svg className="w-7 h-7 stroke-[#2196f3]" viewBox="0 0 24 24" fill="none" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h4M16 11h2"/><path d="M6 17v3M18 17v3"/></svg>,
-                title: 'Komerčné chladenie',
-                desc: 'Škálovateľné riešenia prispôsobené pre firemné prostredia.',
+                title: 'Inštalácia klimatizácie',
+                desc: 'Odborná inštalácia pre maximálne chladenie a účinnosť.',
                 btn: 'Získať cenovú ponuku',
               },
               {
-                img: 'https://picsum.photos/seed/eco1/500/300',
+                img: '/green.jpg',
                 icon: <svg className="w-7 h-7 stroke-[#2196f3]" viewBox="0 0 24 24" fill="none" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12M12 12C12 7 17 3 22 3c0 5-3 9-10 9zM12 12C12 7 7 3 2 3c0 5 3 9 10 9z"/></svg>,
                 title: 'Ekologické riešenia',
                 desc: 'Znížte náklady na energie s ekologickou klimatizáciou.',
@@ -275,7 +275,7 @@ export default function Home() {
               <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group relative flex flex-col">
                 {/* Image inset */}
                 <div className="m-2 rounded-xl overflow-hidden h-52 relative">
-                  <Image src={s.img} fill alt={s.title} className="object-cover group-hover:scale-105 transition-transform duration-700" unoptimized />
+                  <Image src={s.img} fill alt={s.title} className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 {/* Floating icon badge */}
                 <div className="absolute left-1/2 -translate-x-1/2 w-[72px] h-[72px] bg-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(33,150,243,0.3)] border border-[rgba(33,150,243,0.15)] z-10" style={{ top: 'calc(0.5rem + 208px - 36px)' }}>
