@@ -206,7 +206,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-5 mb-10">
               <div className="flex items-center gap-4 p-2 w-full">
                 <div className="icon-box-glow w-16 h-16">
-                  <svg viewBox="0 0 24 24" className="w-8 h-8 fill-none" stroke="#1a2b49" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 24 24" className="w-8 h-8 fill-none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="5" width="20" height="14" rx="2"/>
                     <line x1="2" y1="10" x2="22" y2="10"/>
                     <path d="M6 14h4"/>
@@ -219,7 +219,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-4 p-2 w-full">
                 <div className="icon-box-glow w-16 h-16">
-                  <svg viewBox="0 0 24 24" className="w-8 h-8 fill-none" stroke="#1a2b49" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 24 24" className="w-8 h-8 fill-none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                   </svg>
                 </div>
