@@ -15,27 +15,29 @@ const Navbar = () => {
       ticking = true;
       requestAnimationFrame(() => {
         const y = window.scrollY;
-        // hysterézia — zamedzí blikaniu pri zobrazení/skrytí adresného riadku na mobile
-        setScrolled((prev) => (prev ? y > 10 : y > 60));
+        // hysterézia — prah mimo zóny skrývania adresného riadku (0–60px)
+        setScrolled((prev) => (prev ? y > 30 : y > 90));
         ticking = false;
       });
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
-    // prechody zapneme až po prvom paint-e — zamedzí "dobiehaniu" navbaru pri načítaní
-    requestAnimationFrame(() => setMounted(true));
+    setMounted(true);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const linkCls = scrolled || isOpen ? 'text-[#1a2b49]' : 'text-white';
+  const solid = scrolled || isOpen;
+  const linkCls = solid ? 'text-[#1a2b49]' : 'text-white';
   const activeLinkCls = 'border-b-2 border-[#2196f3]';
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 py-3 px-6 md:px-12 transform-gpu ${mounted ? 'transition-[background-color,box-shadow] duration-300' : ''} ${scrolled || isOpen ? 'bg-white shadow-md' : 'bg-transparent'}`}
-      style={{ willChange: 'background-color', backfaceVisibility: 'hidden' }}
-    >
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between h-16 md:h-[72px]">
+    <nav className="fixed top-0 left-0 w-full z-50 py-3 px-6 md:px-12">
+      {/* Vrstva pozadia — prelína sa iba opacity, layout sa nikdy nemení */}
+      <div
+        className={`absolute inset-0 bg-white shadow-md ${mounted ? 'transition-opacity duration-300' : ''} ${solid ? 'opacity-100' : 'opacity-0'}`}
+        aria-hidden="true"
+      />
+      <div className="relative max-w-[1400px] mx-auto flex items-center justify-between h-16 md:h-[72px]">
 
         {/* Logo */}
         <Link href="/" className="flex items-center relative z-50" onClick={() => setIsOpen(false)}>
