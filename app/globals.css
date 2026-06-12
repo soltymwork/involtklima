@@ -30,3 +30,47 @@
     @apply w-full h-px bg-gradient-to-r from-transparent via-[#2196f3]/40 to-transparent my-0;
   }
 }
+
+/* Feature cards — presne ako Airvana originál */
+.feat-card {
+  background: rgba(33, 150, 243, 0.14);
+  border: 1px solid rgba(33, 150, 243, 0.32);
+  box-shadow: 0 0 40px rgba(33, 150, 243, 0.22);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.75rem 4rem;
+}
+.feat-card:hover {
+  background: #2196f3;
+  transform: translateY(-10px);
+  box-shadow: 0 0 55px rgba(33, 150, 243, 0.5);
+}
+.feat-icon {
+  color: #1a2b49;
+  transition: color 0.35s ease;
+  margin-bottom: 1.5rem;
+}
+.feat-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a2b49;
+  margin-bottom: 0.75rem;
+  transition: color 0.35s ease;
+}
+.feat-desc {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+  text-align: center;
+  transition: color 0.35s ease;
+}
+.feat-card:hover .feat-icon,
+.feat-card:hover .feat-title,
+.feat-card:hover .feat-desc {
+  color: white;
+}

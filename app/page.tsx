@@ -80,9 +80,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
             {/* Card 1 */}
-            <motion.div {...fadeUp(0.1)} className="rounded-2xl px-7 pt-10 pb-16 relative overflow-hidden flex flex-col items-center border border-[rgba(33,150,243,0.3)] shadow-[0_0_40px_rgba(33,150,243,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_rgba(33,150,243,0.3)]" style={{background:'radial-gradient(ellipse at 0% 0%,rgba(33,150,243,0.13) 0%,transparent 55%),radial-gradient(ellipse at 100% 0%,rgba(33,150,243,0.13) 0%,transparent 55%),white'}}>
-              <div className="mb-6 text-[#1a2b49]">
-                {/* Indoor AC wall unit with drip marks */}
+            <motion.div {...fadeUp(0.1)} className="feat-card">
+              <div className="feat-icon">
                 <svg className="w-14 h-14 stroke-current" viewBox="0 0 56 56" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="6" y="14" width="44" height="18" rx="3"/>
                   <line x1="10" y1="20" x2="46" y2="20"/>
@@ -96,17 +95,16 @@ export default function Home() {
                   <circle cx="38" cy="41" r="1.5" fill="currentColor" stroke="none"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-bold mb-3 text-[#1a2b49]">Professional Consultation</h3>
-              <p className="text-gray-500 text-sm leading-relaxed text-center">Get expert advice to choose the right cooling system for your space and needs.</p>
-              <div className="absolute bottom-0 left-0 w-full h-10 text-white">
-                <svg viewBox="0 0 100 25" preserveAspectRatio="none" className="w-full h-full fill-current"><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
+              <p className="feat-title">Professional Consultation</p>
+              <p className="feat-desc">Get expert advice to choose the right cooling system for your space and needs.</p>
+              <div className="absolute bottom-0 left-0 w-full h-10" style={{color:'white'}}>
+                <svg viewBox="0 0 100 25" preserveAspectRatio="none" style={{width:'100%',height:'100%',fill:'white'}}><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
               </div>
             </motion.div>
 
             {/* Card 2 */}
-            <motion.div {...fadeUp(0.15)} className="rounded-2xl px-7 pt-10 pb-16 relative overflow-hidden flex flex-col items-center border border-[rgba(33,150,243,0.3)] shadow-[0_0_40px_rgba(33,150,243,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_rgba(33,150,243,0.3)]" style={{background:'radial-gradient(ellipse at 0% 0%,rgba(33,150,243,0.13) 0%,transparent 55%),radial-gradient(ellipse at 100% 0%,rgba(33,150,243,0.13) 0%,transparent 55%),white'}}>
-              <div className="mb-6 text-[#1a2b49]">
-                {/* Split AC unit with air flow lines */}
+            <motion.div {...fadeUp(0.15)} className="feat-card">
+              <div className="feat-icon">
                 <svg className="w-14 h-14 stroke-current" viewBox="0 0 56 56" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="6" y="16" width="44" height="16" rx="3"/>
                   <line x1="10" y1="22" x2="46" y2="22"/>
@@ -119,17 +117,16 @@ export default function Home() {
                   <path d="M44 32 Q44 38 48 42"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-bold mb-3 text-[#1a2b49]">Customized Installation</h3>
-              <p className="text-gray-500 text-sm leading-relaxed text-center">We design and install tailored air conditioning systems for optimal performance.</p>
-              <div className="absolute bottom-0 left-0 w-full h-10 text-white">
-                <svg viewBox="0 0 100 25" preserveAspectRatio="none" className="w-full h-full fill-current"><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
+              <p className="feat-title">Customized Installation</p>
+              <p className="feat-desc">We design and install tailored air conditioning systems performance.</p>
+              <div className="absolute bottom-0 left-0 w-full h-10">
+                <svg viewBox="0 0 100 25" preserveAspectRatio="none" style={{width:'100%',height:'100%',fill:'white'}}><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
               </div>
             </motion.div>
 
             {/* Card 3 */}
-            <motion.div {...fadeUp(0.2)} className="rounded-2xl px-7 pt-10 pb-16 relative overflow-hidden flex flex-col items-center border border-[rgba(33,150,243,0.3)] shadow-[0_0_40px_rgba(33,150,243,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_rgba(33,150,243,0.3)]" style={{background:'radial-gradient(ellipse at 0% 0%,rgba(33,150,243,0.13) 0%,transparent 55%),radial-gradient(ellipse at 100% 0%,rgba(33,150,243,0.13) 0%,transparent 55%),white'}}>
-              <div className="mb-6 text-[#1a2b49]">
-                {/* Box/portable AC with circular fan */}
+            <motion.div {...fadeUp(0.2)} className="feat-card">
+              <div className="feat-icon">
                 <svg className="w-14 h-14 stroke-current" viewBox="0 0 56 56" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="8" y="10" width="40" height="36" rx="3"/>
                   <circle cx="28" cy="28" r="10"/>
@@ -138,40 +135,35 @@ export default function Home() {
                   <line x1="28" y1="32" x2="28" y2="38"/>
                   <line x1="18" y1="28" x2="24" y2="28"/>
                   <line x1="32" y1="28" x2="38" y2="28"/>
-                  <line x1="21" y1="21" x2="25.2" y2="25.2"/>
-                  <line x1="30.8" y1="30.8" x2="35" y2="35"/>
-                  <line x1="35" y1="21" x2="30.8" y2="25.2"/>
-                  <line x1="25.2" y1="30.8" x2="21" y2="35"/>
+                  <line x1="21.5" y1="21.5" x2="25.2" y2="25.2"/>
+                  <line x1="30.8" y1="30.8" x2="34.5" y2="34.5"/>
+                  <line x1="34.5" y1="21.5" x2="30.8" y2="25.2"/>
+                  <line x1="25.2" y1="30.8" x2="21.5" y2="34.5"/>
                   <line x1="12" y1="13" x2="16" y2="13"/>
                   <line x1="12" y1="16" x2="16" y2="16"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-bold mb-3 text-[#1a2b49]">Smart Cooling Technology</h3>
-              <p className="text-gray-500 text-sm leading-relaxed text-center">Enjoy the latest energy-efficient innovations with seamless automation.</p>
-              <div className="absolute bottom-0 left-0 w-full h-10 text-white">
-                <svg viewBox="0 0 100 25" preserveAspectRatio="none" className="w-full h-full fill-current"><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
+              <p className="feat-title">Smart Cooling Technology</p>
+              <p className="feat-desc">Enjoy the latest energy-efficient innovations with seamless automation.</p>
+              <div className="absolute bottom-0 left-0 w-full h-10">
+                <svg viewBox="0 0 100 25" preserveAspectRatio="none" style={{width:'100%',height:'100%',fill:'white'}}><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
               </div>
             </motion.div>
 
             {/* Card 4 */}
-            <motion.div {...fadeUp(0.25)} className="rounded-2xl px-7 pt-10 pb-16 relative overflow-hidden flex flex-col items-center border border-[rgba(33,150,243,0.3)] shadow-[0_0_40px_rgba(33,150,243,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_rgba(33,150,243,0.3)]" style={{background:'radial-gradient(ellipse at 0% 0%,rgba(33,150,243,0.13) 0%,transparent 55%),radial-gradient(ellipse at 100% 0%,rgba(33,150,243,0.13) 0%,transparent 55%),white'}}>
-              <div className="mb-6 text-[#1a2b49]">
-                {/* Tools + AC workbench */}
+            <motion.div {...fadeUp(0.25)} className="feat-card">
+              <div className="feat-icon">
                 <svg className="w-14 h-14 stroke-current" viewBox="0 0 56 56" fill="none" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="8" y="36" width="40" height="10" rx="2"/>
-                  <line x1="8" y1="36" x2="48" y2="36"/>
-                  <path d="M18 36 L18 28 M18 28 Q18 22 14 22 Q10 22 10 26 Q10 30 14 30 L18 30"/>
-                  <path d="M38 36 L38 26 L34 22 M34 22 L42 22 M42 22 L42 26 L38 26"/>
+                  <path d="M18 36 L18 28 Q18 22 14 22 Q10 22 10 26 Q10 30 14 30 L18 30"/>
+                  <path d="M38 36 L38 26 L34 22 L42 22 L42 26 L38 26"/>
                   <path d="M26 36 L26 24 Q26 18 28 18 Q30 18 30 24 L30 36"/>
-                  <line x1="14" y1="40" x2="14" y2="40"/>
-                  <line x1="28" y1="40" x2="28" y2="40"/>
-                  <line x1="42" y1="40" x2="42" y2="40"/>
                 </svg>
               </div>
-              <h3 className="text-lg font-bold mb-3 text-[#1a2b49]">Ongoing Maintenance</h3>
-              <p className="text-gray-500 text-sm leading-relaxed text-center">Ensure long-lasting performance with regular check-ups and expert servicing.</p>
-              <div className="absolute bottom-0 left-0 w-full h-10 text-white">
-                <svg viewBox="0 0 100 25" preserveAspectRatio="none" className="w-full h-full fill-current"><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
+              <p className="feat-title">Ongoing Maintenance</p>
+              <p className="feat-desc">Ensure long-lasting performance with regular check-ups and expert servicing.</p>
+              <div className="absolute bottom-0 left-0 w-full h-10">
+                <svg viewBox="0 0 100 25" preserveAspectRatio="none" style={{width:'100%',height:'100%',fill:'white'}}><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
               </div>
             </motion.div>
 
