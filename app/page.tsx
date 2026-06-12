@@ -1,6 +1,7 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Facebook, PhoneCall, Mail, Wrench, MapPin, Headphones, ShieldCheck, Thermometer, CheckCircle2 } from "lucide-react";
 
@@ -10,6 +11,61 @@ const fadeUp = (delay = 0) => ({
   viewport: { once: true },
   transition: { duration: 0.55, delay },
 });
+
+/* Slider — na mobile horizontálny snap (1 karta = celá šírka), na desktope grid */
+function Carousel({ count, children }: { count: number; children: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    let raf = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const center = el.scrollLeft + el.clientWidth / 2;
+        const kids = Array.from(el.children) as HTMLElement[];
+        let best = 0, bd = Infinity;
+        kids.forEach((c, i) => {
+          const cc = c.offsetLeft + c.offsetWidth / 2;
+          const d = Math.abs(cc - center);
+          if (d < bd) { bd = d; best = i; }
+        });
+        setActive(best);
+      });
+    };
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => { el.removeEventListener('scroll', onScroll); cancelAnimationFrame(raf); };
+  }, []);
+
+  const goTo = (i: number) => {
+    const el = ref.current;
+    if (!el) return;
+    const c = el.children[i] as HTMLElement;
+    if (c) el.scrollTo({ left: c.offsetLeft, behavior: 'smooth' });
+  };
+
+  return (
+    <>
+      <div ref={ref} className="flex lg:grid lg:grid-cols-4 gap-5 lg:gap-7 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-hide pb-2 lg:pb-0">
+        {children}
+      </div>
+      <div className="flex lg:hidden justify-center mt-8 gap-2.5 items-center">
+        {Array.from({ length: count }).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i)}
+            aria-label={`Snímka ${i + 1}`}
+            className={`rounded-full transition-all flex items-center justify-center ${i === active ? 'w-4 h-4 border-2 border-[#2196f3]' : 'w-2.5 h-2.5 bg-blue-200'}`}
+          >
+            {i === active && <span className="w-2 h-2 rounded-full bg-[#2196f3]" />}
+          </button>
+        ))}
+      </div>
+    </>
+  );
+}
 
 const SectionDivider = () => (
   <div className="w-full h-px bg-gradient-to-r from-transparent via-[#2196f3]/40 to-transparent" />
@@ -28,7 +84,7 @@ export default function Home() {
     <div className="flex flex-col w-full min-h-screen font-sans">
 
       {/* ── 1. HERO ── */}
-      <section className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center pt-24 overflow-hidden bg-gray-900">
+      <section className="relative w-full h-[100svh] min-h-[640px] flex items-center justify-center pt-24 overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
           <Image src="/hero.jpg" fill alt="Klimatizácia Involtklima" className="object-cover object-[80%_center] md:object-center" style={{animation:'zoomInOut 10s ease-in-out infinite'}} priority />
           <div className="absolute inset-0 bg-[#0c1a2e]/55" />
@@ -240,7 +296,7 @@ export default function Home() {
       {/* ── 4. SERVICES ── */}
       <section className="py-20 bg-[#f0f9ff]">
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="flex lg:grid lg:grid-cols-4 gap-7 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0 pb-2 lg:pb-0">
+          <Carousel count={4}>
 
             {[
               {
@@ -272,7 +328,7 @@ export default function Home() {
                 btn: 'Ísť eco',
               },
             ].map((s, i) => (
-              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group relative flex flex-col snap-start shrink-0 lg:shrink w-full lg:w-auto">
+              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group relative flex flex-col snap-start shrink-0 lg:shrink-0 w-full lg:w-auto">
                 {/* Image inset */}
                 <div className="m-2 rounded-xl overflow-hidden h-52 relative">
                   <Image src={s.img} fill alt={s.title} className="object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -290,16 +346,7 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
-          </div>
-
-          {/* Slider dots — len mobil */}
-          <div className="flex lg:hidden justify-center mt-8 gap-2.5 items-center">
-            {[0,1,2,3].map((_, i) => (
-              <div key={i} className={`rounded-full transition-all ${i === 0 ? 'w-4 h-4 border-2 border-[#2196f3] flex items-center justify-center' : 'w-2.5 h-2.5 bg-blue-200'}`}>
-                {i === 0 && <div className="w-2 h-2 rounded-full bg-[#2196f3]" />}
-              </div>
-            ))}
-          </div>
+          </Carousel>
         </div>
       </section>
 
@@ -348,14 +395,15 @@ export default function Home() {
           </motion.div>
           <SectionDivider />
 
-          <div className="flex lg:grid lg:grid-cols-4 gap-7 mt-12 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0 pb-2 lg:pb-0">
+          <div className="mt-12">
+          <Carousel count={4}>
             {[
               { title: 'Ekologická klimatizácia', date: '12. júna 2026', img: '/blog-eko.jpg', desc: 'Udržateľné chladiace riešenia sa stávajú prioritou, keďže rastú ceny energií aj environmentálne požiadavky.' },
               { title: 'Energetické triedy HVAC', date: '12. júna 2026', img: '/blog-triedy.jpg', desc: 'Pochopenie energetických tried pomáha domácnostiam vybrať si najúspornejší klimatizačný systém.' },
               { title: 'Kedy volať servis?', date: '12. júna 2026', img: '/blog-servis.jpg', desc: 'Včasné rozpoznanie varovných signálov môže predísť nákladným poruchám a predĺžiť životnosť zariadenia.' },
               { title: 'Tipy na leto', date: '12. júna 2026', img: '/blog-leto.jpg', desc: 'Ako efektívne využívať klimatizáciu v lete, aby ste maximalizovali komfort a minimalizovali náklady.' },
             ].map((post, i) => (
-              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group flex flex-col snap-start shrink-0 lg:shrink w-full lg:w-auto">
+              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group flex flex-col snap-start shrink-0 lg:shrink-0 w-full lg:w-auto">
                 <div className="m-2 rounded-xl overflow-hidden h-48 relative">
                   <Image src={post.img} fill alt={post.title} className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
@@ -366,15 +414,7 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
-          </div>
-
-          {/* Slider dots — len mobil */}
-          <div className="flex lg:hidden justify-center mt-8 gap-2.5 items-center">
-            {[0,1,2,3].map((_, i) => (
-              <div key={i} className={`rounded-full transition-all ${i === 0 ? 'w-4 h-4 border-2 border-[#2196f3] flex items-center justify-center' : 'w-2.5 h-2.5 bg-blue-200'}`}>
-                {i === 0 && <div className="w-2 h-2 rounded-full bg-[#2196f3]" />}
-              </div>
-            ))}
+          </Carousel>
           </div>
         </div>
       </section>
