@@ -36,6 +36,15 @@
   }
 }
 
+/* Skrytie scrollbaru pre slidery */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 /* Tlačidlo — shimmer sweep z ľava doprava */
 .btn-airvana {
   position: relative;

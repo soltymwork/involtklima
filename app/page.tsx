@@ -240,7 +240,7 @@ export default function Home() {
       {/* ── 4. SERVICES ── */}
       <section className="py-20 bg-[#f0f9ff]">
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="flex lg:grid lg:grid-cols-4 gap-7 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0 pb-2 lg:pb-0">
 
             {[
               {
@@ -272,7 +272,7 @@ export default function Home() {
                 btn: 'Ísť eco',
               },
             ].map((s, i) => (
-              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group relative flex flex-col">
+              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group relative flex flex-col snap-center shrink-0 lg:shrink w-[82%] sm:w-[46%] lg:w-auto">
                 {/* Image inset */}
                 <div className="m-2 rounded-xl overflow-hidden h-52 relative">
                   <Image src={s.img} fill alt={s.title} className="object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -292,11 +292,11 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Slider dots */}
-          <div className="flex justify-center mt-10 gap-2.5 items-center">
-            {[0,1,2,3,4,5,6,7].map((_, i) => (
-              <div key={i} className={`rounded-full transition-all ${i === 2 ? 'w-4 h-4 border-2 border-[#2196f3] flex items-center justify-center' : 'w-2.5 h-2.5 bg-blue-200'}`}>
-                {i === 2 && <div className="w-2 h-2 rounded-full bg-[#2196f3]" />}
+          {/* Slider dots — len mobil */}
+          <div className="flex lg:hidden justify-center mt-8 gap-2.5 items-center">
+            {[0,1,2,3].map((_, i) => (
+              <div key={i} className={`rounded-full transition-all ${i === 0 ? 'w-4 h-4 border-2 border-[#2196f3] flex items-center justify-center' : 'w-2.5 h-2.5 bg-blue-200'}`}>
+                {i === 0 && <div className="w-2 h-2 rounded-full bg-[#2196f3]" />}
               </div>
             ))}
           </div>
