@@ -110,6 +110,18 @@
   color: white;
 }
 
+/* Icon box — biely s modrým glow z oboch strán (About sekcia) */
+.icon-box-glow {
+  background: linear-gradient(145deg, #ffffff, #f0f9ff);
+  border-radius: 10px;
+  box-shadow: 5px 5px 25px #01adf0, -5px -5px 25px #0066cc;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 /* Zdieľaný glow pre services / blog / contact karty */
 .glow-card {
   background: #ffffff;
