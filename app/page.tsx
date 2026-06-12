@@ -377,7 +377,7 @@ export default function Home() {
           {/* Logo + Social */}
           <div className="flex flex-col items-center mb-12">
             <div className="mb-6">
-              <Image src="/logo.png" alt="Involtklima" width={200} height={55} className="object-contain h-14 w-auto" />
+              <Image src="/logo.png" alt="Involtklima" width={280} height={77} className="object-contain h-20 w-auto" />
             </div>
             <div className="flex items-center gap-3">
               <a href="#" aria-label="Facebook" className="w-11 h-11 rounded-full border border-[rgba(33,150,243,0.3)] bg-white flex items-center justify-center text-[#1a2b49] hover:border-[#2196f3] hover:text-[#2196f3] transition-colors shadow-[0_3px_12px_rgba(33,150,243,0.08)]">
