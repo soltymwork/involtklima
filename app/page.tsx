@@ -60,9 +60,9 @@ export default function Home() {
         </div>
 
         {/* Wave divider */}
-        <div className="absolute bottom-0 left-0 w-full z-20 translate-y-1">
-          <svg viewBox="0 0 1440 80" className="w-full h-auto fill-white">
-            <path d="M0,40 Q360,-40 720,40 T1440,40 V80 H0 Z" />
+        <div className="absolute bottom-0 left-0 w-full z-20 translate-y-[2px]">
+          <svg viewBox="0 0 1440 120" className="w-full h-auto fill-white block" preserveAspectRatio="none">
+            <path d="M0,50 Q360,-30 720,50 T1440,50 V120 H0 Z" />
           </svg>
         </div>
       </section>
