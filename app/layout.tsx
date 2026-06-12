@@ -1,0 +1,24 @@
+import type { Metadata } from 'next';
+import { Plus_Jakarta_Sans } from 'next/font/google';
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakarta' });
+
+export const metadata: Metadata = {
+  title: 'Involtklima | Klimatizačné Služby a Montáž',
+  description: 'Profesionálne klimatizačné riešenia, montáž a servis. Zostaňte v chlade s Involtklima.',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="sk">
+      <body className={`${jakarta.variable} font-sans antialiased text-[#1a2b49] bg-white`} suppressHydrationWarning>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
