@@ -22,7 +22,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <Link href="/" className="flex items-center relative z-50" onClick={() => setIsOpen(false)}>
-          <Image src="/logo.png" alt="Involtklima" width={180} height={50} className="object-contain h-12 w-auto" priority />
+          <Image src="/logo.png" alt="Involtklima" width={240} height={66} className="object-contain h-16 w-auto" priority />
         </Link>
 
         {/* Desktop Links */}
