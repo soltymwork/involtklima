@@ -81,7 +81,7 @@ const CardWave = () => (
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full min-h-screen font-sans">
+    <div className="flex flex-col w-full min-h-screen font-sans overflow-x-clip">
 
       {/* ── 1. HERO ── */}
       <section className="relative w-full h-[100svh] min-h-[640px] flex items-center justify-center pt-24 overflow-hidden bg-gray-900">

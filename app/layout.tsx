@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="sk">
-      <body className={`${outfit.variable} ${kodchasan.variable} font-sans antialiased text-[#1a2b49] bg-white`} style={{ fontFamily: 'var(--font-outfit), Outfit, sans-serif' }} suppressHydrationWarning>
+      <body className={`${outfit.variable} ${kodchasan.variable} font-sans antialiased text-[#1a2b49] bg-white overflow-x-clip`} style={{ fontFamily: 'var(--font-outfit), Outfit, sans-serif' }} suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
         <Footer />
