@@ -350,14 +350,14 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-12">
             {[
-              { title: 'Ekologická klimatizácia', date: '15. januára 2025', img: 'https://picsum.photos/seed/bl1/500/300', desc: 'Udržateľné chladiace riešenia sa stávajú prioritou, keďže rastú ceny energií aj environmentálne požiadavky.' },
-              { title: 'Energetické triedy HVAC', date: '13. januára 2025', img: 'https://picsum.photos/seed/bl2/500/300', desc: 'Pochopenie energetických tried pomáha domácnostiam vybrať si najúspornejší klimatizačný systém.' },
-              { title: 'Kedy volať servis?', date: '12. januára 2025', img: 'https://picsum.photos/seed/bl3/500/300', desc: 'Včasné rozpoznanie varovných signálov môže predísť nákladným poruchám a predĺžiť životnosť zariadenia.' },
-              { title: 'Tipy na leto', date: '10. januára 2025', img: 'https://picsum.photos/seed/bl4/500/300', desc: 'Ako efektívne využívať klimatizáciu v lete, aby ste maximalizovali komfort a minimalizovali náklady.' },
+              { title: 'Ekologická klimatizácia', date: '12. júna 2026', img: '/blog-eko.jpg', desc: 'Udržateľné chladiace riešenia sa stávajú prioritou, keďže rastú ceny energií aj environmentálne požiadavky.' },
+              { title: 'Energetické triedy HVAC', date: '12. júna 2026', img: '/blog-triedy.jpg', desc: 'Pochopenie energetických tried pomáha domácnostiam vybrať si najúspornejší klimatizačný systém.' },
+              { title: 'Kedy volať servis?', date: '12. júna 2026', img: '/blog-servis.jpg', desc: 'Včasné rozpoznanie varovných signálov môže predísť nákladným poruchám a predĺžiť životnosť zariadenia.' },
+              { title: 'Tipy na leto', date: '12. júna 2026', img: '/blog-leto.jpg', desc: 'Ako efektívne využívať klimatizáciu v lete, aby ste maximalizovali komfort a minimalizovali náklady.' },
             ].map((post, i) => (
               <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group flex flex-col">
                 <div className="m-2 rounded-xl overflow-hidden h-48 relative">
-                  <Image src={post.img} fill alt={post.title} className="object-cover group-hover:scale-105 transition-transform duration-700" unoptimized />
+                  <Image src={post.img} fill alt={post.title} className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="font-bold text-lg mb-2 text-[#2196f3] hover:text-[#1565c0] cursor-pointer transition-colors">{post.title}</h3>
