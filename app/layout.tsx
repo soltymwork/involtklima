@@ -18,6 +18,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <div className="fixed bottom-5 right-5 z-[9999] bg-[#1a2b49] text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg opacity-80 pointer-events-none select-none tracking-wide">
+          Vizuálny návrh
+        </div>
       </body>
     </html>
   );
