@@ -30,23 +30,23 @@ export default function Home() {
       {/* ── 1. HERO ── */}
       <section className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center pt-24 overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
-          <Image src="/hero.jpg" fill alt="Hero Air Conditioning" className="object-cover" priority />
+          <Image src="/hero.jpg" fill alt="Klimatizácia Involtklima" className="object-cover" priority />
           <div className="absolute inset-0 bg-[#0c1a2e]/55" />
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto text-white">
           <motion.h1 {...fadeUp(0)} className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Stay Cool, Live Better<br />Energy-Efficient Cooling
+            Pohoda doma aj v práci<br />Úsporné klimatizácie
           </motion.h1>
           <motion.p {...fadeUp(0.1)} className="text-lg md:text-xl font-normal mb-10 text-gray-200">
-            Upgrade your comfort with advanced cooling.
+            Zvýšte svoj komfort s modernou klimatizáciou na mieru.
           </motion.p>
           <motion.div {...fadeUp(0.2)}>
             <Link
               href="/services"
               className="inline-block bg-[#2196f3] hover:bg-[#1976d2] transition-colors px-10 py-4 font-bold text-white text-base tracking-wide uppercase"
             >
-              Discover More
+              Zistiť viac
             </Link>
           </motion.div>
         </div>
@@ -71,10 +71,10 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.h2 {...fadeUp(0)} className="text-4xl md:text-5xl font-bold text-[#1a2b49] mb-4">
-            Seamless Climate Control for Your Comfort
+            Dokonalá klimatizácia pre váš komfort
           </motion.h2>
           <motion.p {...fadeUp(0.05)} className="text-gray-500 mb-14 max-w-2xl mx-auto text-base">
-            Effortless cooling solutions tailored for ultimate comfort and efficiency.
+            Efektívne chladiace riešenia šité na mieru pre maximálny komfort a úsporu energie.
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -95,8 +95,8 @@ export default function Home() {
                   <circle cx="38" cy="41" r="1.5" fill="currentColor" stroke="none"/>
                 </svg>
               </div>
-              <p className="feat-title">Professional Consultation</p>
-              <p className="feat-desc">Get expert advice to choose the right cooling system for your space and needs.</p>
+              <p className="feat-title">Odborné poradenstvo</p>
+              <p className="feat-desc">Poradíme vám, ako vybrať správny chladiaci systém pre váš priestor a potreby.</p>
               <div className="absolute bottom-0 left-0 w-full h-10" style={{color:'white'}}>
                 <svg viewBox="0 0 100 25" preserveAspectRatio="none" style={{width:'100%',height:'100%',fill:'white'}}><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
               </div>
@@ -117,8 +117,8 @@ export default function Home() {
                   <path d="M44 32 Q44 38 48 42"/>
                 </svg>
               </div>
-              <p className="feat-title">Customized Installation</p>
-              <p className="feat-desc">We design and install tailored air conditioning systems performance.</p>
+              <p className="feat-title">Montáž na mieru</p>
+              <p className="feat-desc">Navrhneme a namontujeme klimatizáciu prispôsobenú vašim požiadavkám.</p>
               <div className="absolute bottom-0 left-0 w-full h-10">
                 <svg viewBox="0 0 100 25" preserveAspectRatio="none" style={{width:'100%',height:'100%',fill:'white'}}><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
               </div>
@@ -143,8 +143,8 @@ export default function Home() {
                   <line x1="12" y1="16" x2="16" y2="16"/>
                 </svg>
               </div>
-              <p className="feat-title">Smart Cooling Technology</p>
-              <p className="feat-desc">Enjoy the latest energy-efficient innovations with seamless automation.</p>
+              <p className="feat-title">Inteligentné chladenie</p>
+              <p className="feat-desc">Využívajte najnovšie energeticky úsporné technológie s plnou automatizáciou.</p>
               <div className="absolute bottom-0 left-0 w-full h-10">
                 <svg viewBox="0 0 100 25" preserveAspectRatio="none" style={{width:'100%',height:'100%',fill:'white'}}><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
               </div>
@@ -160,8 +160,8 @@ export default function Home() {
                   <path d="M26 36 L26 24 Q26 18 28 18 Q30 18 30 24 L30 36"/>
                 </svg>
               </div>
-              <p className="feat-title">Ongoing Maintenance</p>
-              <p className="feat-desc">Ensure long-lasting performance with regular check-ups and expert servicing.</p>
+              <p className="feat-title">Pravidelný servis</p>
+              <p className="feat-desc">Zaistíme dlhodobú spoľahlivosť zariadenia pravidelnými prehliadkami a servisom.</p>
               <div className="absolute bottom-0 left-0 w-full h-10">
                 <svg viewBox="0 0 100 25" preserveAspectRatio="none" style={{width:'100%',height:'100%',fill:'white'}}><path d="M0,15 C30,30 70,0 100,15 L100,25 L0,25 Z"/></svg>
               </div>
@@ -194,13 +194,13 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-[#1a2b49] mb-6 leading-tight">
-              Cooling Solutions for Ultimate Comfort
+              Klimatizačné riešenia pre váš dokonalý komfort
             </h2>
             <p className="text-gray-500 mb-5 text-base leading-relaxed">
-              At Involtklima, we believe that air conditioning is more than just temperature control&mdash;it&apos;s about creating a comfortable, energy-efficient, and healthy environment. With cutting-edge HVAC technology and modern design, we offer superior climate control solutions for both residential and commercial spaces.
+              V Involtklima veríme, že klimatizácia nie je len o teplote&mdash;ide o vytváranie príjemného, energeticky úsporného a zdravého prostredia. S modernou HVAC technológiou a profesionálnym prístupom ponúkame špičkové riešenia klimatizácie pre domácnosti aj firmy.
             </p>
             <p className="text-gray-500 mb-10 text-base leading-relaxed">
-              Our team of highly skilled professionals takes pride in providing personalized cooling solutions tailored to your unique needs. Whether you&apos;re looking for a sleek, wall-mounted AC unit for your home or an advanced climate control system for your business, Involtklima guarantees precision, reliability, and sustainability.
+              Náš tím skúsených odborníkov sa stará o to, aby každá inštalácia spĺňala vaše požiadavky. Či hľadáte elegantnú nástennú jednotku pre domov alebo pokročilý systém klimatizácie pre vašu firmu, Involtklima garantuje presnosť, spoľahlivosť a trvalo udržateľné riešenia.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 mb-10">
@@ -213,8 +213,8 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-base text-[#2196f3] mb-0.5">Energy-Efficient Technology</h4>
-                  <p className="text-sm text-gray-500">Enjoy efficient cooling with lower energy costs.</p>
+                  <h4 className="font-bold text-base text-[#2196f3] mb-0.5">Energeticky úsporné technológie</h4>
+                  <p className="text-sm text-gray-500">Efektívne chladenie s nižšími nákladmi na energie.</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 p-5 rounded-xl card-airvana w-full">
@@ -224,14 +224,14 @@ export default function Home() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-base text-[#2196f3] mb-0.5">Expert Installation &amp; Maintenance</h4>
-                  <p className="text-sm text-gray-500">Reliable HVAC services for lasting performance.</p>
+                  <h4 className="font-bold text-base text-[#2196f3] mb-0.5">Odborná montáž a servis</h4>
+                  <p className="text-sm text-gray-500">Spoľahlivé HVAC služby pre dlhodobý výkon.</p>
                 </div>
               </div>
             </div>
 
             <Link href="/about" className="inline-block bg-[#2196f3] hover:bg-[#1976d2] transition-colors px-10 py-4 font-bold text-white text-base uppercase tracking-wide">
-              Discover More
+              Zistiť viac
             </Link>
           </motion.div>
         </div>
@@ -246,30 +246,30 @@ export default function Home() {
               {
                 img: 'https://picsum.photos/seed/smartac/500/300',
                 icon: <svg className="w-7 h-7 stroke-[#2196f3]" viewBox="0 0 24 24" fill="none" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2H8V6a4 4 0 0 1 4-4z"/><rect x="4" y="8" width="16" height="10" rx="2"/><line x1="8" y1="13" x2="10" y2="13"/><line x1="14" y1="13" x2="16" y2="13"/></svg>,
-                title: 'Smart Climate Control',
-                desc: 'Automated temperature control for ultimate comfort.',
-                btn: 'Discover More',
+                title: 'Inteligentná klimatizácia',
+                desc: 'Automatická regulácia teploty pre maximálny komfort.',
+                btn: 'Zistiť viac',
               },
               {
                 img: 'https://picsum.photos/seed/airq/500/300',
                 icon: <svg className="w-7 h-7 stroke-[#2196f3]" viewBox="0 0 24 24" fill="none" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12c1-2 3-3 4-3s3 1 4 3"/><path d="M12 9v3"/></svg>,
-                title: 'Air Quality',
-                desc: 'Advanced filtration for fresher and healthier air.',
-                btn: 'Enhance Air',
+                title: 'Kvalita vzduchu',
+                desc: 'Pokročilá filtrácia pre čistejší a zdravší vzduch.',
+                btn: 'Vylepšiť vzduch',
               },
               {
                 img: 'https://picsum.photos/seed/commerc/500/300',
                 icon: <svg className="w-7 h-7 stroke-[#2196f3]" viewBox="0 0 24 24" fill="none" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h4M16 11h2"/><path d="M6 17v3M18 17v3"/></svg>,
-                title: 'Commercial Cooling',
-                desc: 'Scalable solutions tailored for business environments.',
-                btn: 'Get a Quote',
+                title: 'Komerčné chladenie',
+                desc: 'Škálovateľné riešenia prispôsobené pre firemné prostredia.',
+                btn: 'Získať cenovú ponuku',
               },
               {
                 img: 'https://picsum.photos/seed/eco1/500/300',
                 icon: <svg className="w-7 h-7 stroke-[#2196f3]" viewBox="0 0 24 24" fill="none" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22V12M12 12C12 7 17 3 22 3c0 5-3 9-10 9zM12 12C12 7 7 3 2 3c0 5 3 9 10 9z"/></svg>,
-                title: 'Energy-Efficient Solutions',
-                desc: 'Reduce energy costs with eco-friendly cooling technology.',
-                btn: 'Go Green',
+                title: 'Ekologické riešenia',
+                desc: 'Znížte náklady na energie s ekologickou klimatizáciou.',
+                btn: 'Ísť eco',
               },
             ].map((s, i) => (
               <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group relative flex flex-col">
@@ -307,10 +307,10 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 text-center">
           <motion.h2 {...fadeUp(0)} className="text-3xl md:text-4xl font-bold text-[#1a2b49] mb-3">
-            Trusted Brands for Superior Cooling
+            Overené značky pre špičkové chladenie
           </motion.h2>
           <motion.p {...fadeUp(0.05)} className="text-gray-500 text-base mb-6">
-            Partnering with top brands for reliable and efficient cooling solutions.
+            Spolupracujeme s top značkami pre spoľahlivé a úsporné klimatizačné riešenia.
           </motion.p>
           <SectionDivider />
 
@@ -351,20 +351,20 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6">
           <motion.div {...fadeUp(0)} className="text-center mb-4">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a2b49] mb-3">
-              Stay Informed with Expert Insights
+              Buďte informovaní s odbornými radami
             </h2>
             <p className="text-gray-500 text-base">
-              Explore the latest trends and tips in air conditioning and climate control.
+              Prečítajte si najnovšie trendy a tipy z oblasti klimatizácie a regulácie klímy.
             </p>
           </motion.div>
           <SectionDivider />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-12">
             {[
-              { title: 'Eco-Friendly Cooling', date: 'January 15, 2025', img: 'https://picsum.photos/seed/bl1/500/300', desc: 'Sustainable cooling solutions are becoming a priority as energy costs rise and environmental concerns grow.' },
-              { title: 'HVAC Energy Ratings', date: 'January 13, 2025', img: 'https://picsum.photos/seed/bl2/500/300', desc: 'Understanding energy ratings helps homeowners choose the most efficient cooling systems available today.' },
-              { title: 'AC Needs Repair', date: 'January 12, 2025', img: 'https://picsum.photos/seed/bl3/500/300', desc: 'Recognizing early warning signs of AC issues can prevent expensive breakdowns and extend unit lifespan.' },
-              { title: 'Summer AC Tips', date: 'January 10, 2025', img: 'https://picsum.photos/seed/bl4/500/300', desc: 'Keeping cool during the summer requires strategic AC usage to maximize comfort while reducing costs.' },
+              { title: 'Ekologická klimatizácia', date: '15. januára 2025', img: 'https://picsum.photos/seed/bl1/500/300', desc: 'Udržateľné chladiace riešenia sa stávajú prioritou, keďže rastú ceny energií aj environmentálne požiadavky.' },
+              { title: 'Energetické triedy HVAC', date: '13. januára 2025', img: 'https://picsum.photos/seed/bl2/500/300', desc: 'Pochopenie energetických tried pomáha domácnostiam vybrať si najúspornejší klimatizačný systém.' },
+              { title: 'Kedy volať servis?', date: '12. januára 2025', img: 'https://picsum.photos/seed/bl3/500/300', desc: 'Včasné rozpoznanie varovných signálov môže predísť nákladným poruchám a predĺžiť životnosť zariadenia.' },
+              { title: 'Tipy na leto', date: '10. januára 2025', img: 'https://picsum.photos/seed/bl4/500/300', desc: 'Ako efektívne využívať klimatizáciu v lete, aby ste maximalizovali komfort a minimalizovali náklady.' },
             ].map((post, i) => (
               <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group flex flex-col">
                 <div className="m-2 rounded-xl overflow-hidden h-48 relative">
@@ -413,14 +413,14 @@ export default function Home() {
           {/* 8 Contact Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 pb-0">
             {[
-              { Icon: PhoneCall,    label: 'Reach out for expert support and assistance anytime.', value: '+123 456 78 90 01' },
-              { Icon: Mail,         label: 'Have questions? Email us for prompt responses.', value: 'info@involtklima.sk' },
-              { Icon: Wrench,       label: 'Get professional help for troubleshooting and maintenance.', value: 'servis@involtklima.sk' },
-              { Icon: MapPin,       label: 'Stop by for in-person consultations and expert guidance.', value: 'Bratislava, Slovakia' },
-              { Icon: Headphones,   label: 'Collaborate with us for mutual growth and success.', value: 'partner@involtklima.sk' },
-              { Icon: ShieldCheck,  label: 'Explore eco-friendly HVAC systems tailored for efficiency.', value: 'Sustainable Cooling' },
-              { Icon: Thermometer,  label: 'Expert installation ensuring top performance and durability.', value: 'Seamless Setup' },
-              { Icon: CheckCircle2, label: 'Upgrade to intelligent climate control solutions for comfort.', value: 'Advanced Automation' },
+              { Icon: PhoneCall,    label: 'Kontaktujte nás pre odbornú pomoc a podporu kedykoľvek.', value: '+123 456 78 90 01' },
+              { Icon: Mail,         label: 'Máte otázky? Napíšte nám, odpovieme promptne.', value: 'info@involtklima.sk' },
+              { Icon: Wrench,       label: 'Odborná pomoc pri diagnostike a servisných zásahoch.', value: 'servis@involtklima.sk' },
+              { Icon: MapPin,       label: 'Navštívte nás osobne pre konzultáciu a odborné poradenstvo.', value: 'Bratislava, Slovensko' },
+              { Icon: Headphones,   label: 'Spolupracujte s nami pre vzájomný rast a úspech.', value: 'partner@involtklima.sk' },
+              { Icon: ShieldCheck,  label: 'Objavte ekologické HVAC systémy šité na úsporu energie.', value: 'Ekologické chladenie' },
+              { Icon: Thermometer,  label: 'Odborná montáž zaručujúca výkon a dlhú životnosť zariadenia.', value: 'Bezchybná montáž' },
+              { Icon: CheckCircle2, label: 'Prejdite na inteligentné riešenia pre maximálny komfort.', value: 'Pokročilá automatizácia' },
             ].map(({ Icon, label, value }, i) => (
               <motion.div key={i} {...fadeUp(i * 0.05)} className="glow-card p-8 flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-full bg-white border-2 border-[rgba(33,150,243,0.2)] flex items-center justify-center shadow-[0_0_15px_rgba(33,150,243,0.15)] mb-5">

@@ -33,14 +33,14 @@ const Navbar = () => {
         {/* Desktop Links */}
         <ul className={`hidden lg:flex items-center gap-8 font-semibold text-sm tracking-wide uppercase ${linkCls} transition-colors duration-300`}>
           <li>
-            <Link href="/" className={`pb-1 ${activeLinkCls}`}>Home</Link>
+            <Link href="/" className={`pb-1 ${activeLinkCls}`}>Domov</Link>
           </li>
           <li className="relative group cursor-pointer flex items-center gap-1 hover:text-[#2196f3] transition-colors">
-            About
+            O nás
             <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </li>
           <li className="relative group cursor-pointer flex items-center gap-1 hover:text-[#2196f3] transition-colors">
-            Services
+            Služby
             <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </li>
           <li className="relative group cursor-pointer flex items-center gap-1 hover:text-[#2196f3] transition-colors">
@@ -48,7 +48,7 @@ const Navbar = () => {
             <svg width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-[#2196f3] transition-colors">Contact</Link>
+            <Link href="/contact" className="hover:text-[#2196f3] transition-colors">Kontakt</Link>
           </li>
         </ul>
 
@@ -86,11 +86,11 @@ const Navbar = () => {
       {isOpen && (
         <div className="fixed inset-0 bg-white z-40 flex flex-col pt-28 px-8 h-screen w-screen">
           <ul className="flex flex-col gap-7 text-[#1a2b49] font-bold text-2xl uppercase tracking-tight">
-            <li><Link href="/" onClick={() => setIsOpen(false)} className="border-b-2 border-[#2196f3] inline-block pb-1">Home</Link></li>
-            <li><Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-[#2196f3] transition-colors">About</Link></li>
-            <li><Link href="/services" onClick={() => setIsOpen(false)} className="hover:text-[#2196f3] transition-colors">Services</Link></li>
+            <li><Link href="/" onClick={() => setIsOpen(false)} className="border-b-2 border-[#2196f3] inline-block pb-1">Domov</Link></li>
+            <li><Link href="/about" onClick={() => setIsOpen(false)} className="hover:text-[#2196f3] transition-colors">O nás</Link></li>
+            <li><Link href="/services" onClick={() => setIsOpen(false)} className="hover:text-[#2196f3] transition-colors">Služby</Link></li>
             <li><Link href="/blog" onClick={() => setIsOpen(false)} className="hover:text-[#2196f3] transition-colors">Blog</Link></li>
-            <li><Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-[#2196f3] transition-colors">Contact</Link></li>
+            <li><Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-[#2196f3] transition-colors">Kontakt</Link></li>
           </ul>
           <div className="mt-10 flex items-center gap-3">
             <svg viewBox="0 0 24 24" className="w-5 h-5 fill-none stroke-[#1a2b49]" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

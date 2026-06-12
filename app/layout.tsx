@@ -7,8 +7,8 @@ import Footer from '@/components/Footer';
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakarta' });
 
 export const metadata: Metadata = {
-  title: 'Involtklima | Klimatizačné Služby a Montáž',
-  description: 'Profesionálne klimatizačné riešenia, montáž a servis. Zostaňte v chlade s Involtklima.',
+  title: 'Involtklima | Klimatizačné služby a montáž',
+  description: 'Profesionálne klimatizačné riešenia, montáž a servis pre domácnosti aj firmy. Involtklima – váš spoľahlivý partner v chladení.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
