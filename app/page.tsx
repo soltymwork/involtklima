@@ -44,7 +44,7 @@ export default function Home() {
           <motion.div {...fadeUp(0.2)}>
             <Link
               href="/services"
-              className="inline-block bg-[#2196f3] hover:bg-[#1976d2] transition-colors px-10 py-4 font-bold text-white text-base tracking-wide uppercase"
+              className="btn-airvana px-10 py-4 text-base"
             >
               Zistiť viac
             </Link>
@@ -230,7 +230,7 @@ export default function Home() {
               </div>
             </div>
 
-            <Link href="/about" className="inline-block bg-[#2196f3] hover:bg-[#1976d2] transition-colors px-10 py-4 font-bold text-white text-base uppercase tracking-wide">
+            <Link href="/about" className="btn-airvana px-10 py-4 text-base">
               Zistiť viac
             </Link>
           </motion.div>
@@ -284,7 +284,7 @@ export default function Home() {
                 <div className="pt-12 pb-8 px-6 text-center flex flex-col flex-grow">
                   <h3 className="text-xl font-bold mb-3 text-[#1a2b49]">{s.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-grow">{s.desc}</p>
-                  <button className="border border-[rgba(33,150,243,0.35)] text-[#1a2b49] rounded font-semibold px-5 py-2.5 hover:bg-[#2196f3] hover:text-white hover:border-[#2196f3] transition-all text-sm">
+                  <button className="btn-airvana px-5 py-2.5 text-sm">
                     {s.btn}
                   </button>
                 </div>

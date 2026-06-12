@@ -36,6 +36,54 @@
   }
 }
 
+/* Tlačidlo — shimmer sweep z ľava doprava */
+.btn-airvana {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: var(--font-outfit), Outfit, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #01adf0, #0066cc);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.4s ease;
+  z-index: 1;
+}
+.btn-airvana::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.22);
+  transform: skewX(-45deg);
+  transition: left 0.5s ease;
+  z-index: 2;
+}
+.btn-airvana:hover::before {
+  left: 150%;
+}
+.btn-airvana::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #01adf0;
+  border-radius: 5px;
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.4s ease;
+}
+.btn-airvana:hover {
+  box-shadow: 0 8px 25px rgba(1, 173, 240, 0.45);
+}
+.btn-airvana:hover::after {
+  opacity: 1;
+}
+
 /* Feature cards — icon-box štýl */
 .feat-card {
   display: flex;
@@ -47,7 +95,7 @@
   padding: 30px 20px 65px;
   border-radius: 15px;
   background: #ffffff;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), inset 0 0 30px rgba(1, 173, 240, 0.35);
+  box-shadow: 0 0 0 1.5px rgba(1, 173, 240, 0.45), 0 15px 35px rgba(0, 0, 0, 0.1), inset 0 0 30px rgba(1, 173, 240, 0.35);
   transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
   z-index: 1;
   overflow: hidden;
