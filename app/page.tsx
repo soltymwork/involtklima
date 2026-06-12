@@ -348,14 +348,14 @@ export default function Home() {
           </motion.div>
           <SectionDivider />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-12">
+          <div className="flex lg:grid lg:grid-cols-4 gap-7 mt-12 overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-hide -mx-6 px-6 lg:mx-0 lg:px-0 pb-2 lg:pb-0">
             {[
               { title: 'Ekologická klimatizácia', date: '12. júna 2026', img: '/blog-eko.jpg', desc: 'Udržateľné chladiace riešenia sa stávajú prioritou, keďže rastú ceny energií aj environmentálne požiadavky.' },
               { title: 'Energetické triedy HVAC', date: '12. júna 2026', img: '/blog-triedy.jpg', desc: 'Pochopenie energetických tried pomáha domácnostiam vybrať si najúspornejší klimatizačný systém.' },
               { title: 'Kedy volať servis?', date: '12. júna 2026', img: '/blog-servis.jpg', desc: 'Včasné rozpoznanie varovných signálov môže predísť nákladným poruchám a predĺžiť životnosť zariadenia.' },
               { title: 'Tipy na leto', date: '12. júna 2026', img: '/blog-leto.jpg', desc: 'Ako efektívne využívať klimatizáciu v lete, aby ste maximalizovali komfort a minimalizovali náklady.' },
             ].map((post, i) => (
-              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group flex flex-col">
+              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group flex flex-col snap-center shrink-0 lg:shrink w-[82%] sm:w-[46%] lg:w-auto">
                 <div className="m-2 rounded-xl overflow-hidden h-48 relative">
                   <Image src={post.img} fill alt={post.title} className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
@@ -365,6 +365,15 @@ export default function Home() {
                   <p className="text-gray-500 text-sm leading-relaxed">{post.desc}</p>
                 </div>
               </motion.div>
+            ))}
+          </div>
+
+          {/* Slider dots — len mobil */}
+          <div className="flex lg:hidden justify-center mt-8 gap-2.5 items-center">
+            {[0,1,2,3].map((_, i) => (
+              <div key={i} className={`rounded-full transition-all ${i === 0 ? 'w-4 h-4 border-2 border-[#2196f3] flex items-center justify-center' : 'w-2.5 h-2.5 bg-blue-200'}`}>
+                {i === 0 && <div className="w-2 h-2 rounded-full bg-[#2196f3]" />}
+              </div>
             ))}
           </div>
         </div>
