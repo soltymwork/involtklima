@@ -376,17 +376,8 @@ export default function Home() {
 
           {/* Logo + Social */}
           <div className="flex flex-col items-center mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <svg width="48" height="48" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="46" height="46" rx="10" fill="#4ab8e8"/>
-                <path d="M9 17 L26 17 C32 17 35 20 32 23 C29 26 24 24 24 24" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-                <path d="M9 23 L24 23 C29 23 31 26 28 28 C26 30 23 29 23 29" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-                <path d="M9 29 L22 29 C26 29 27 31.5 25 33 C23.5 34 22 33.5 22 33.5" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-              </svg>
-              <div className="flex flex-col leading-none">
-                <span className="font-black text-xl text-[#1a2b49] uppercase tracking-tight">INVOLT</span>
-                <span className="font-light text-base text-[#4ab8e8] tracking-widest uppercase">klima</span>
-              </div>
+            <div className="mb-6">
+              <Image src="/logo.png" alt="Involtklima" width={200} height={55} className="object-contain h-14 w-auto" />
             </div>
             <div className="flex items-center gap-3">
               <a href="#" aria-label="Facebook" className="w-11 h-11 rounded-full border border-[rgba(33,150,243,0.3)] bg-white flex items-center justify-center text-[#1a2b49] hover:border-[#2196f3] hover:text-[#2196f3] transition-colors shadow-[0_3px_12px_rgba(33,150,243,0.08)]">
