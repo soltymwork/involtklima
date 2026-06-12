@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,17 +21,8 @@ const Navbar = () => {
       <div className="max-w-[1400px] mx-auto flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 relative z-50" onClick={() => setIsOpen(false)}>
-          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-            <rect width="46" height="46" rx="10" fill="#4ab8e8"/>
-            <path d="M9 17 L26 17 C32 17 35 20 32 23 C29 26 24 24 24 24" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-            <path d="M9 23 L24 23 C29 23 31 26 28 28 C26 30 23 29 23 29" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-            <path d="M9 29 L22 29 C26 29 27 31.5 25 33 C23.5 34 22 33.5 22 33.5" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-          </svg>
-          <div className="flex flex-col leading-none">
-            <span className={`font-black text-xl tracking-tight uppercase ${linkCls} transition-colors duration-300`}>INVOLT</span>
-            <span className={`font-light text-base tracking-widest uppercase ${scrolled || isOpen ? 'text-[#4ab8e8]' : 'text-[#4ab8e8]'} transition-colors duration-300`}>klima</span>
-          </div>
+        <Link href="/" className="flex items-center relative z-50" onClick={() => setIsOpen(false)}>
+          <Image src="/logo.png" alt="Involtklima" width={180} height={50} className="object-contain h-12 w-auto" priority />
         </Link>
 
         {/* Desktop Links */}
