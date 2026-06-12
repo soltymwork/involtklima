@@ -1,20 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0099ff;
-  --color-primary-dark: #0077dd;
-  --color-secondary: #00ccff;
-  --color-dark: #122137;
-  --color-sky-light: #e6fafe;
+  --color-primary: #2196f3;
+  --color-primary-dark: #1976d2;
+  --color-secondary: #00bcd4;
+  --color-dark: #1a2b49;
+  --color-sky-light: #f0f9ff;
 
   --font-sans: var(--font-jakarta);
 }
 
 @layer base {
   body {
-    @apply text-dark bg-white font-sans;
+    @apply text-[#1a2b49] bg-white font-sans;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans tracking-tight text-[#122137];
+    @apply font-sans tracking-tight text-[#1a2b49];
+  }
+}
+
+@layer utilities {
+  .card-airvana {
+    @apply bg-white rounded-2xl border border-[rgba(33,150,243,0.15)] shadow-[0_5px_25px_rgba(33,150,243,0.08)] transition-all duration-300;
+  }
+  .card-airvana:hover {
+    @apply -translate-y-1 shadow-[0_10px_35px_rgba(33,150,243,0.2)] border-[rgba(33,150,243,0.4)];
+  }
+  .section-divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-[#2196f3]/40 to-transparent my-0;
   }
 }
