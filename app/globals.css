@@ -19,6 +19,11 @@
   }
 }
 
+@keyframes zoomInOut {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
 @layer utilities {
   .card-airvana {
     @apply bg-white rounded-2xl border border-[rgba(33,150,243,0.15)] shadow-[0_5px_25px_rgba(33,150,243,0.08)] transition-all duration-300;
