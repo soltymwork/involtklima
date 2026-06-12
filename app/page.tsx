@@ -204,7 +204,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 mb-10">
-              <div className="flex items-center gap-4 p-5 rounded-xl card-airvana w-full">
+              <div className="glow-card flex items-center gap-4 p-5 w-full">
                 <div className="icon-box-glow w-16 h-16">
                   <svg viewBox="0 0 24 24" className="w-8 h-8 fill-none" stroke="#1a2b49" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="5" width="20" height="14" rx="2"/>
@@ -217,7 +217,7 @@ export default function Home() {
                   <p className="text-sm text-gray-500">Efektívne chladenie s nižšími nákladmi na energie.</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 p-5 rounded-xl card-airvana w-full">
+              <div className="glow-card flex items-center gap-4 p-5 w-full">
                 <div className="icon-box-glow w-16 h-16">
                   <svg viewBox="0 0 24 24" className="w-8 h-8 fill-none" stroke="#1a2b49" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
@@ -413,14 +413,14 @@ export default function Home() {
           {/* 8 Contact Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 pb-0">
             {[
-              { Icon: PhoneCall,    label: 'Kontaktujte nás pre odbornú pomoc a podporu kedykoľvek.', value: '+123 456 78 90 01' },
-              { Icon: Mail,         label: 'Máte otázky? Napíšte nám, odpovieme promptne.', value: 'info@involtklima.sk' },
-              { Icon: Wrench,       label: 'Odborná pomoc pri diagnostike a servisných zásahoch.', value: 'servis@involtklima.sk' },
-              { Icon: MapPin,       label: 'Navštívte nás osobne pre konzultáciu a odborné poradenstvo.', value: 'Bratislava, Slovensko' },
-              { Icon: Headphones,   label: 'Spolupracujte s nami pre vzájomný rast a úspech.', value: 'partner@involtklima.sk' },
-              { Icon: ShieldCheck,  label: 'Objavte ekologické HVAC systémy šité na úsporu energie.', value: 'Ekologické chladenie' },
-              { Icon: Thermometer,  label: 'Odborná montáž zaručujúca výkon a dlhú životnosť zariadenia.', value: 'Bezchybná montáž' },
-              { Icon: CheckCircle2, label: 'Prejdite na inteligentné riešenia pre maximálny komfort.', value: 'Pokročilá automatizácia' },
+              { Icon: PhoneCall,    label: 'Zavolajte nám kedykoľvek — radi poradíme.', value: '+421 910 954 262' },
+              { Icon: Mail,         label: 'Všeobecné otázky a informácie.', value: 'info@involt.sk' },
+              { Icon: Wrench,       label: 'Servisné požiadavky a objednávky.', value: 'involt@involt.sk' },
+              { Icon: MapPin,       label: 'Navštívte nás osobne pre konzultáciu.', value: 'Kozárovce 763, 93522 Kozárovce' },
+              { Icon: Headphones,   label: 'Kontaktná osoba pre všetky záležitosti.', value: 'Martin Hlavatý' },
+              { Icon: ShieldCheck,  label: 'Fakturačné meno spoločnosti.', value: 'Involt s. r. o.' },
+              { Icon: Thermometer,  label: 'Identifikačné číslo organizácie.', value: 'IČO: 56457227' },
+              { Icon: CheckCircle2, label: 'Daňové identifikačné číslo.', value: 'DIČ: 2122313644' },
             ].map(({ Icon, label, value }, i) => (
               <motion.div key={i} {...fadeUp(i * 0.05)} className="glow-card p-8 flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-full bg-white border-2 border-[rgba(33,150,243,0.2)] flex items-center justify-center shadow-[0_0_15px_rgba(33,150,243,0.15)] mb-5">
