@@ -314,14 +314,13 @@ export default function Home() {
           </motion.p>
           <SectionDivider />
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mt-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mt-10">
             {[
               { name: 'SAMSUNG', style: 'font-black text-[#1a2b49] text-xl tracking-wider' },
               { name: 'DAIKIN', style: 'font-black text-[#0060af] text-xl tracking-widest' },
               { name: 'SIEMENS', style: 'font-bold text-[#009999] text-xl tracking-wide' },
-              { name: 'FUJITSU', style: 'font-black text-[#1a2b49] text-xl tracking-widest' },
-              { name: 'MITSUBISHI', style: 'font-black text-[#e60012] text-lg tracking-tight' },
-              { name: 'BOSCH', style: 'font-black text-[#e20015] text-xl tracking-wider' },
+              { name: 'SINCLAIR', style: 'font-black text-[#1a2b49] text-xl tracking-wide' },
+              { name: 'MIDEA', style: 'font-black text-[#e60012] text-xl tracking-widest' },
             ].map((brand, i) => (
               <motion.div
                 key={i}
