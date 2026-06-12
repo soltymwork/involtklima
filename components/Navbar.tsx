@@ -21,13 +21,16 @@ const Navbar = () => {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 relative z-50" onClick={() => setIsOpen(false)}>
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
-            <circle cx="22" cy="22" r="21" stroke="#2196f3" strokeWidth="2"/>
-            <path d="M11 17 C14.5 13.5 18 13.5 22 17 C26 20.5 29.5 20.5 33 17" stroke="#2196f3" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
-            <path d="M11 22 C14.5 18.5 18 18.5 22 22 C26 25.5 29.5 25.5 33 22" stroke="#2196f3" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
-            <path d="M11 27 C14.5 23.5 18 23.5 22 27 C26 30.5 29.5 30.5 33 27" stroke="#2196f3" strokeWidth="2.2" fill="none" strokeLinecap="round"/>
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+            <rect width="46" height="46" rx="10" fill="#4ab8e8"/>
+            <path d="M9 17 L26 17 C32 17 35 20 32 23 C29 26 24 24 24 24" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+            <path d="M9 23 L24 23 C29 23 31 26 28 28 C26 30 23 29 23 29" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+            <path d="M9 29 L22 29 C26 29 27 31.5 25 33 C23.5 34 22 33.5 22 33.5" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
           </svg>
-          <span className={`font-bold text-2xl tracking-tight uppercase ${linkCls} transition-colors duration-300`}>Involtklima</span>
+          <div className="flex flex-col leading-none">
+            <span className={`font-black text-xl tracking-tight uppercase ${linkCls} transition-colors duration-300`}>INVOLT</span>
+            <span className={`font-light text-base tracking-widest uppercase ${scrolled || isOpen ? 'text-[#4ab8e8]' : 'text-[#4ab8e8]'} transition-colors duration-300`}>klima</span>
+          </div>
         </Link>
 
         {/* Desktop Links */}
@@ -65,7 +68,7 @@ const Navbar = () => {
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
             </div>
-            <span className={`font-bold text-base tracking-tight ${linkCls} transition-colors duration-300`}>+123 456 789 10</span>
+            <span className={`font-bold text-base tracking-tight ${linkCls} transition-colors duration-300`}>+421 910 954 262</span>
           </div>
 
           {/* Hamburger */}
@@ -96,7 +99,7 @@ const Navbar = () => {
             <svg viewBox="0 0 24 24" className="w-5 h-5 fill-none stroke-[#1a2b49]" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
-            <span className="font-bold text-lg text-[#1a2b49]">+123 456 789 10</span>
+            <span className="font-bold text-lg text-[#1a2b49]">+421 910 954 262</span>
           </div>
         </div>
       )}
