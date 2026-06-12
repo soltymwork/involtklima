@@ -30,7 +30,7 @@ export default function Home() {
       {/* ── 1. HERO ── */}
       <section className="relative w-full h-[100vh] min-h-[700px] flex items-center justify-center pt-24 overflow-hidden bg-gray-900">
         <div className="absolute inset-0 z-0">
-          <Image src="/hero.jpg" fill alt="Klimatizácia Involtklima" className="object-cover object-[25%_center] md:object-center" style={{animation:'zoomInOut 10s ease-in-out infinite'}} priority />
+          <Image src="/hero.jpg" fill alt="Klimatizácia Involtklima" className="object-cover object-right md:object-center" style={{animation:'zoomInOut 10s ease-in-out infinite'}} priority />
           <div className="absolute inset-0 bg-[#0c1a2e]/55" />
         </div>
 
