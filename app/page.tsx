@@ -272,7 +272,7 @@ export default function Home() {
                 btn: 'Go Green',
               },
             ].map((s, i) => (
-              <motion.div key={i} {...fadeUp(i * 0.08)} className="bg-white rounded-2xl overflow-hidden shadow-[0_5px_25px_rgba(33,150,243,0.1)] hover:shadow-[0_10px_40px_rgba(33,150,243,0.2)] transition-all duration-300 hover:-translate-y-1 group relative flex flex-col">
+              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group relative flex flex-col">
                 {/* Image inset */}
                 <div className="m-2 rounded-xl overflow-hidden h-52 relative">
                   <Image src={s.img} fill alt={s.title} className="object-cover group-hover:scale-105 transition-transform duration-700" unoptimized />
@@ -366,7 +366,7 @@ export default function Home() {
               { title: 'AC Needs Repair', date: 'January 12, 2025', img: 'https://picsum.photos/seed/bl3/500/300', desc: 'Recognizing early warning signs of AC issues can prevent expensive breakdowns and extend unit lifespan.' },
               { title: 'Summer AC Tips', date: 'January 10, 2025', img: 'https://picsum.photos/seed/bl4/500/300', desc: 'Keeping cool during the summer requires strategic AC usage to maximize comfort while reducing costs.' },
             ].map((post, i) => (
-              <motion.div key={i} {...fadeUp(i * 0.08)} className="bg-white rounded-2xl overflow-hidden shadow-[0_5px_25px_rgba(33,150,243,0.08)] hover:shadow-[0_10px_35px_rgba(33,150,243,0.18)] transition-all duration-300 hover:-translate-y-1 group flex flex-col">
+              <motion.div key={i} {...fadeUp(i * 0.08)} className="glow-card group flex flex-col">
                 <div className="m-2 rounded-xl overflow-hidden h-48 relative">
                   <Image src={post.img} fill alt={post.title} className="object-cover group-hover:scale-105 transition-transform duration-700" unoptimized />
                 </div>
@@ -422,7 +422,7 @@ export default function Home() {
               { Icon: Thermometer,  label: 'Expert installation ensuring top performance and durability.', value: 'Seamless Setup' },
               { Icon: CheckCircle2, label: 'Upgrade to intelligent climate control solutions for comfort.', value: 'Advanced Automation' },
             ].map(({ Icon, label, value }, i) => (
-              <motion.div key={i} {...fadeUp(i * 0.05)} className="bg-white rounded-xl p-8 flex flex-col items-center text-center relative overflow-hidden shadow-[0_3px_20px_rgba(33,150,243,0.07)] hover:shadow-[0_8px_30px_rgba(33,150,243,0.18)] transition-all duration-300">
+              <motion.div key={i} {...fadeUp(i * 0.05)} className="glow-card p-8 flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-full bg-white border-2 border-[rgba(33,150,243,0.2)] flex items-center justify-center shadow-[0_0_15px_rgba(33,150,243,0.15)] mb-5">
                   <Icon className="w-5 h-5 text-[#1a2b49] stroke-[1.5]" />
                 </div>
